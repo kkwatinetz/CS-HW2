@@ -1,5 +1,5 @@
 //unit2.hw
-//Group members: Katie Kwatinetz, Lanaiya
+//Group members: Katie Kwatinetz, Lanaiya Walters
 
 #include <stdio.h>
 
