@@ -37,4 +37,13 @@ int main()
     *************************************
     */
 
+    float hw; 
+    float project;
+    float lab;
+    float midterm1, midterm2, final;
+
+    printf ("Enrer the hw average score: ");
+    scanf ("%f", &hw);
+    printf ("Enter the project average score: ");
+
 }
