@@ -41,9 +41,12 @@ int main()
     float project;
     float lab;
     float midterm1, midterm2, final;
-
+    do
+    {
     printf ("Enter the hw average score: ");
     scanf ("%f", &hw);
     printf ("Enter the project average score: ");
+    }
+    while (StartOver == 'y' || StartOver == 'Y' || StartOver == 'x' || StartOver == 'X');
 
 }
