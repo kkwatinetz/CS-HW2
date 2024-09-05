@@ -43,7 +43,9 @@ int main()
     float midterm1, midterm2, Final;
     char startOver;
     int counter = 0;
-
+    int finalScore;
+    char letterGrade;
+    
     do
     {
         printf ("Enter the hw average score: ");
@@ -146,5 +148,19 @@ int main()
 
     }
     while (startOver == 'y' || startOver == 'Y' || startOver == 'x' || startOver == 'X');
-
+    switch(finalScore/10)
+    {
+        case 10:
+        case 9: letterGrade = 'A';
+        break;
+        case 8: letterGrade = 'B';
+        break;
+        case 7: letterGrade = 'C';
+        break;
+        case 6: letterGrade = 'D';
+        break;
+        default: letterGrade = 'F';
+    }
+    printf("%c", letterGrade);
+    
 }
