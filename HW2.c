@@ -147,7 +147,18 @@ int main()
         }
 
     }
-    while (startOver == 'y' || startOver == 'Y' || startOver == 'x' || startOver == 'X');
+    while (startOver == 'y' || startOver == 'Y');
+    counter = 0;
+    while ((startOver != 'y' || startOver != 'Y'|| startOver != 'n' || startOver != 'N') && counter < 2)
+    {
+        counter++;
+        printf ("Invalid character. Try again: ");
+        scanf ("%c", &startOver);
+    }
+    if (counter == 2)
+    {
+        printf("\t\t\t\tPROGRAM TERMINATED");
+    }
     switch(finalScore/10)
     {
         case 10:
