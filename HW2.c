@@ -72,8 +72,6 @@ int main()
         counter = 0;
         printf("Enter midterm1, midterm2, and final: ");
         scanf("%f %f %f", &midterm1, &midterm2, &Final);
-
-        // Validate midterm1
         while ((midterm1 < 0 || midterm1 > 100) && counter < 2)
         {
             counter++;
