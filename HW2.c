@@ -127,9 +127,17 @@ int main()
             default:
                 letterGrade = 'F';
         }
+        printf("Here are all your average scores:\n");
+        printf("HW \t\t\t : %.2f\n",hw);
+        printf("PROJECTS \t\t\t : %.2f\n",project);
+        printf("LABS\t\t\t : %.2f\n",lab);
+        printf("MIDTERM1\t\t\t : %.2f\n",midterm1);
+        printf("MIDTERM2\t\t\t : %.2f\n",midterm2);
+        printf("FINAL\t\t\t : %.2f\n",Final);
 
         printf("-------------------------------\n");
         printf("OVERALL AVERAGE: %.2f\n", finalScore);
+        printf("(%.2f*.2 + %.2f*.2 + %.2f*.05 + (%.2f+%.2f+%.2f)*.55/3 is %.2f)",hw,project,lab,midterm1,midterm2,Final);
         printf("-------------------------------\n");
         printf("\t\t\tFINAL LETTER GRADE: %c\n", letterGrade);
 
@@ -158,7 +166,9 @@ int main()
 
     return 0;
 }
-    /*
+
+
+ /*
     Enter the hw average score:
     Invalid score. Try again:
     Enter the project average score:
@@ -189,3 +199,4 @@ int main()
     All average scores need to be declared as floats
     *************************************
     */
+
