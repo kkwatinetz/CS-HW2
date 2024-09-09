@@ -121,10 +121,46 @@ int main()
             continue;
         }
 
+        // Calculate the final score
+        finalScore = (hw * 0.2) + (project * 0.2) + (lab * 0.05) + ((midterm1 + midterm2 + Final) / 3) * 0.55;
+
+        // Determine letter grade
+        switch ((int)finalScore / 10)
+        {
+            case 10:
+            case 9:
+                letterGrade = 'A';
+                break;
+            case 8:
+                letterGrade = 'B';
+                break;
+            case 7:
+                letterGrade = 'C';
+                break;
+            case 6:
+                letterGrade = 'D';
+                break;
+            default:
+                letterGrade = 'F';
+        }
+        printf("Here are all your average scores:\n");
+        printf("HW \t\t\t : %.2f\n",hw);
+        printf("PROJECTS \t\t\t : %.2f\n",project);
+        printf("LABS\t\t\t : %.2f\n",lab);
+        printf("MIDTERM1\t\t\t : %.2f\n",midterm1);
+        printf("MIDTERM2\t\t\t : %.2f\n",midterm2);
+        printf("FINAL\t\t\t : %.2f\n",Final);
+
+        printf("-------------------------------\n");
+        printf("OVERALL AVERAGE: %.2f\n", finalScore);
+        printf("(%.2f*.2 + %.2f*.2 + %.2f*.05 + (%.2f+%.2f+%.2f)*.55/3 is %.2f)",hw,project,lab,midterm1,midterm2,Final);
+        printf("-------------------------------\n");
+        printf("\t\t\tFINAL LETTER GRADE: %c\n", letterGrade);
 
         // Start Over?
         printf("Would you like to start over (Y/N): ");
         scanf(" %c", &startOver);
+        
 
     } while (startOver == 'Y' || startOver == 'y');
 
