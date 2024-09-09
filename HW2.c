@@ -128,8 +128,10 @@ int main()
                 letterGrade = 'F';
         }
 
+        printf("-------------------------------\n");
         printf("OVERALL AVERAGE: %.2f\n", finalScore);
-        printf("FINAL LETTER GRADE: %c\n", letterGrade);
+        printf("-------------------------------\n");
+        printf("\t\t\tFINAL LETTER GRADE: %c\n", letterGrade);
 
         // Ask if they want to start over
         printf("Would you like to start over (Y/N): ");
