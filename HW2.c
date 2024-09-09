@@ -29,6 +29,7 @@ int main()
             scanf(" %c", &startOver);
             if (startOver != 'Y' && startOver != 'y')
                 break;
+            continue;
         }
 
         // Project average
@@ -47,6 +48,7 @@ int main()
             scanf(" %c", &startOver);
             if (startOver != 'Y' && startOver != 'y')
                 break;
+            continue;
         }
 
         // Lab average
@@ -144,23 +146,23 @@ int main()
                 letterGrade = 'F';
         }
         printf("Here are all your average scores:\n");
-        printf("HW \t\t\t : %.2f\n",hw);
-        printf("PROJECTS \t\t\t : %.2f\n",project);
-        printf("LABS\t\t\t : %.2f\n",lab);
-        printf("MIDTERM1\t\t\t : %.2f\n",midterm1);
-        printf("MIDTERM2\t\t\t : %.2f\n",midterm2);
-        printf("FINAL\t\t\t : %.2f\n",Final);
+        printf("HW \t\t\t: %.2f\n",hw);
+        printf("PROJECTS \t\t\t: %.2f\n",project);
+        printf("LABS\t\t\t: %.2f\n",lab);
+        printf("MIDTERM1\t\t\t: %.2f\n",midterm1);
+        printf("MIDTERM2\t\t\t: %.2f\n",midterm2);
+        printf("FINAL\t\t\t: %.2f\n",Final);
 
         printf("-------------------------------\n");
         printf("OVERALL AVERAGE: %.2f\n", finalScore);
-        printf("(%.2f*.2 + %.2f*.2 + %.2f*.05 + (%.2f+%.2f+%.2f)*.55/3 is %.2f)",hw,project,lab,midterm1,midterm2,Final);
+        printf("(%.2f*.2 + %.2f*.2 + %.2f*.05 + (%.2f+%.2f+%.2f)*.55/3 is %.2f)\n",hw,project,lab,midterm1,midterm2,Final,finalScore);
         printf("-------------------------------\n");
         printf("\t\t\tFINAL LETTER GRADE: %c\n", letterGrade);
 
         // Start Over?
         printf("Would you like to start over (Y/N): ");
         scanf(" %c", &startOver);
-        
+
 
     } while (startOver == 'Y' || startOver == 'y');
 
@@ -182,5 +184,3 @@ int main()
 
     return 0;
 }
-
-
