@@ -1,3 +1,4 @@
+
 //unit2.hw
 //Group members: Katie Kwatinetz, Lanaiya Walters
 
@@ -10,6 +11,7 @@ int main()
     int counter;
     float finalScore;
     char letterGrade;
+
 
     do
     {
@@ -27,9 +29,10 @@ int main()
         }
         if (counter == 2)
             {
-                printf("I'm sorry... You tried too many times.\nWould you like to start over (Y/N): ");
+                printf("\nI'm sorry... You tried too many times.\n\nWould you like to start over (Y/N): ");
                 scanf(" %c", &startOver);
                 if (startOver != 'Y' && startOver != 'y')
+                    goto bye;
                     break;
                 continue;
             }
@@ -50,9 +53,10 @@ int main()
         }
         if (counter == 2)
         {
-            printf("I'm sorry... You tried too many times.\nWould you like to start over (Y/N): ");
+            printf("\nI'm sorry... You tried too many times.\n\nWould you like to start over (Y/N): ");
             scanf(" %c", &startOver);
             if (startOver != 'Y' && startOver != 'y')
+                goto bye;
                 break;
             continue;
         }
@@ -72,9 +76,10 @@ int main()
         }
         if (counter == 2)
         {
-            printf("I'm sorry... You tried too many times.\nWould you like to start over (Y/N): ");
+            printf("\nI'm sorry... You tried too many times.\n\nWould you like to start over (Y/N): ");
             scanf(" %c", &startOver);
             if (startOver != 'Y' && startOver != 'y')
+                goto bye;
                 break;
             continue;
         }
@@ -93,9 +98,10 @@ int main()
         }
         if (counter == 2)
         {
-            printf("I'm sorry... You tried too many times.\nWould you like to start over (Y/N): ");
+            printf("\nI'm sorry... You tried too many times.\n\nWould you like to start over (Y/N): ");
             scanf(" %c", &startOver);
             if (startOver != 'Y' && startOver != 'y')
+                goto bye;
                 break;
             continue;
         }
@@ -112,9 +118,10 @@ int main()
         }
         if (counter == 2)
         {
-            printf("I'm sorry... You tried too many times.\nWould you like to start over (Y/N): ");
+            printf("\nI'm sorry... You tried too many times.\n\nWould you like to start over (Y/N): ");
             scanf(" %c", &startOver);
             if (startOver != 'Y' && startOver != 'y')
+                goto bye;
                 break;
             continue;
         }
@@ -131,9 +138,10 @@ int main()
         }
         if (counter == 2)
         {
-            printf("I'm sorry... You tried too many times.\nWould you like to start over (Y/N): ");
+            printf("\nI'm sorry... You tried too many times.\n\nWould you like to start over (Y/N): ");
             scanf(" %c", &startOver);
             if (startOver != 'Y' && startOver != 'y')
+                goto bye;
                 break;
             continue;
         }
@@ -178,26 +186,31 @@ int main()
         printf("Would you like to start over (Y/N): ");
         scanf(" %c", &startOver);
 
+        bye:
         counter = 0;
         while (startOver != 'Y' && startOver != 'y' && startOver != 'N' && startOver != 'n')
         {
             printf("Invalid character. Try again: ");
             scanf(" %c", &startOver);
+
             if (startOver != 'N' && startOver != 'n' && startOver != 'Y' && startOver != 'y')
             {
                 counter++;
             }
+            if (counter == 2)
+            {
+                printf("\n\t\t\tProgram terminated!\n");
+                break;
+            }
         }
-        if (counter == 2)
-        {
-            printf("\t\t\tProgram terminated!\n");
-        }
-        printf("-------------------------------\n\n");
+        
+
     }
     while (startOver == 'Y' || startOver == 'y');
 
-
-    printf("\t\t\tGoodbye!\n");
+    if (startOver == 'N' || startOver == 'n'){
+        printf("\n\t\t\tGoodbye!\n");
+    }
 
     return 0;
 }
