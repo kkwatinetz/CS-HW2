@@ -1,4 +1,5 @@
-/unit2.hw
+
+//unit2.hw
 //Group members: Katie Kwatinetz, Lanaiya Walters
 
 #include <stdio.h>
@@ -17,7 +18,7 @@ int main()
         counter = 0;
         printf("Enter the hw average score: ");
         scanf("%f", &hw);
-        do
+        while ((hw < 0 || hw > 100) && counter < 2)
         {
             printf("Invalid score. Try again: ");
             scanf("%f", &hw);
@@ -25,8 +26,6 @@ int main()
                 counter++;
             }
         }
-        while ((hw < 0 || hw > 100) && counter < 2);
-
         if (counter == 2)
             {
                 printf("I'm sorry... You tried too many times.\nWould you like to start over (Y/N): ");
@@ -35,23 +34,21 @@ int main()
                     break;
                 continue;
             }
-
+        
 
         // Project average
         counter = 0;
         printf("\nEnter the project average score: ");
         scanf("%f", &project);
-
-        do
+        
+        while ((project < 0 || project > 100) && counter < 2)
         {
             printf("Invalid score. Try again: ");
-            scanf("%f", &project);
+            scanf("%f", &project); 
             if (project < 0 || project > 100){
                 counter++;
             }
         }
-        while ((project < 0 || project > 100) && counter < 2);
-
         if (counter == 2)
         {
             printf("I'm sorry... You tried too many times.\nWould you like to start over (Y/N): ");
@@ -66,7 +63,7 @@ int main()
         counter = 0;
         printf("\nEnter lab average score: ");
         scanf("%f", &lab);
-        do
+        while ((lab < 0 || lab > 100) && counter < 2)
         {
             printf("Invalid score. Try again: ");
             scanf("%f", &lab);
@@ -74,8 +71,6 @@ int main()
                 counter++;
             }
         }
-        while ((lab < 0 || lab > 100) && counter < 2);
-
         if (counter == 2)
         {
             printf("I'm sorry... You tried too many times.\nWould you like to start over (Y/N): ");
@@ -89,7 +84,7 @@ int main()
         counter = 0;
         printf("\nEnter midterm1, midterm2, and final: ");
         scanf("%f %f %f", &midterm1, &midterm2, &Final);
-        do
+        while ((midterm1 < 0 || midterm1 > 100) && counter < 2)
         {
             printf("Invalid midterm1 score. Try again: ");
             scanf("%f", &midterm1);
@@ -97,8 +92,6 @@ int main()
                 counter++;
             }
         }
-        while ((midterm1 < 0 || midterm1 > 100) && counter < 2);
-
         if (counter == 2)
         {
             printf("I'm sorry... You tried too many times.\nWould you like to start over (Y/N): ");
@@ -110,7 +103,7 @@ int main()
 
         // midterm2
         counter = 0;
-        do
+        while ((midterm2 < 0 || midterm2 > 100) && counter < 2)
         {
             printf("Invalid midterm2 score. Try again: ");
             scanf("%f", &midterm2);
@@ -118,8 +111,6 @@ int main()
                 counter++;
             }
         }
-        while ((midterm2 < 0 || midterm2 > 100) && counter < 2);
-
         if (counter == 2)
         {
             printf("I'm sorry... You tried too many times.\nWould you like to start over (Y/N): ");
@@ -131,7 +122,7 @@ int main()
 
         // Final
         counter = 0;
-        do
+        while ((Final < 0 || Final > 100) && counter < 2)
         {
             printf("Invalid final score. Try again: ");
             scanf("%f", &Final);
@@ -139,8 +130,6 @@ int main()
                 counter++;
             }
         }
-        while ((Final < 0 || Final > 100) && counter < 2);
-
         if (counter == 2)
         {
             printf("I'm sorry... You tried too many times.\nWould you like to start over (Y/N): ");
@@ -211,4 +200,3 @@ int main()
 
     return 0;
 }
-
