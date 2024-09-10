@@ -1,4 +1,3 @@
-
 //unit2.hw
 //Group members: Katie Kwatinetz, Lanaiya Walters
 
@@ -34,17 +33,17 @@ int main()
                     break;
                 continue;
             }
-        
+
 
         // Project average
         counter = 0;
         printf("\nEnter the project average score: ");
         scanf("%f", &project);
-        
+
         while ((project < 0 || project > 100) && counter < 2)
         {
             printf("Invalid score. Try again: ");
-            scanf("%f", &project); 
+            scanf("%f", &project);
             if (project < 0 || project > 100){
                 counter++;
             }
@@ -179,21 +178,23 @@ int main()
         printf("Would you like to start over (Y/N): ");
         scanf(" %c", &startOver);
 
-
-    } while (startOver == 'Y' || startOver == 'y');
-
-    //Make sure answer is No
-    counter = 0;
-    while (startOver != 'N' && startOver != 'n' && counter < 2)
-    {
-        counter++;
-        printf("Invalid character. Try again: ");
-        scanf(" %c", &startOver);
+        counter = 0;
+        while (startOver != 'Y' && startOver != 'y' && startOver != 'N' && startOver != 'n')
+        {
+            printf("Invalid character. Try again: ");
+            scanf(" %c", &startOver);
+            if (startOver != 'N' && startOver != 'n' && startOver != 'Y' && startOver != 'y')
+            {
+                counter++;
+            }
+        }
+        if (counter == 2)
+        {
+            printf("\t\t\tProgram terminated!\n");
+        }
+        printf("-------------------------------\n\n");
     }
-    if (counter == 2)
-    {
-        printf("\t\t\tProgram terminated!\n");
-    }
+    while (startOver == 'Y' || startOver == 'y');
 
 
     printf("\t\t\tGoodbye!\n");
