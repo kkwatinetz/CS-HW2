@@ -19,28 +19,34 @@ int main()
         scanf("%f", &hw);
         while ((hw < 0 || hw > 100) && counter < 2)
         {
-            counter++;
             printf("Invalid score. Try again: ");
             scanf("%f", &hw);
+            if (hw < 0 || hw > 100){
+                counter++;
+            }
         }
         if (counter == 2)
-        {
-            printf("I'm sorry... You tried too many times.\nWould you like to start over (Y/N): ");
-            scanf(" %c", &startOver);
-            if (startOver != 'Y' && startOver != 'y')
-                break;
-            continue;
-        }
+            {
+                printf("I'm sorry... You tried too many times.\nWould you like to start over (Y/N): ");
+                scanf(" %c", &startOver);
+                if (startOver != 'Y' && startOver != 'y')
+                    break;
+                continue;
+            }
+        
 
         // Project average
         counter = 0;
-        printf("Enter the project average score: ");
+        printf("\nEnter the project average score: ");
         scanf("%f", &project);
+        
         while ((project < 0 || project > 100) && counter < 2)
         {
-            counter++;
             printf("Invalid score. Try again: ");
-            scanf("%f", &project);
+            scanf("%f", &project); 
+            if (project < 0 || project > 100){
+                counter++;
+            }
         }
         if (counter == 2)
         {
@@ -51,15 +57,18 @@ int main()
             continue;
         }
 
+
         // Lab average
         counter = 0;
-        printf("Enter lab average score: ");
+        printf("\nEnter lab average score: ");
         scanf("%f", &lab);
         while ((lab < 0 || lab > 100) && counter < 2)
         {
-            counter++;
             printf("Invalid score. Try again: ");
             scanf("%f", &lab);
+            if (lab < 0 || lab > 100){
+                counter++;
+            }
         }
         if (counter == 2)
         {
@@ -72,13 +81,15 @@ int main()
 
         // Midterm1
         counter = 0;
-        printf("Enter midterm1, midterm2, and final: ");
+        printf("\nEnter midterm1, midterm2, and final: ");
         scanf("%f %f %f", &midterm1, &midterm2, &Final);
         while ((midterm1 < 0 || midterm1 > 100) && counter < 2)
         {
-            counter++;
             printf("Invalid midterm1 score. Try again: ");
             scanf("%f", &midterm1);
+            if (midterm1 < 0 || midterm1 > 100){
+                counter++;
+            }
         }
         if (counter == 2)
         {
@@ -93,9 +104,11 @@ int main()
         counter = 0;
         while ((midterm2 < 0 || midterm2 > 100) && counter < 2)
         {
-            counter++;
             printf("Invalid midterm2 score. Try again: ");
             scanf("%f", &midterm2);
+            if (midterm2 < 0 || midterm2 > 100){
+                counter++;
+            }
         }
         if (counter == 2)
         {
@@ -110,9 +123,11 @@ int main()
         counter = 0;
         while ((Final < 0 || Final > 100) && counter < 2)
         {
-            counter++;
             printf("Invalid final score. Try again: ");
             scanf("%f", &Final);
+            if (Final < 0 || Final > 100){
+                counter++;
+            }
         }
         if (counter == 2)
         {
@@ -146,12 +161,12 @@ int main()
                 letterGrade = 'F';
         }
         printf("Here are all your average scores:\n");
-        printf("HW \t\t\t: %.2f\n",hw);
-        printf("PROJECTS \t\t\t: %.2f\n",project);
-        printf("LABS\t\t\t: %.2f\n",lab);
-        printf("MIDTERM1\t\t\t: %.2f\n",midterm1);
-        printf("MIDTERM2\t\t\t: %.2f\n",midterm2);
-        printf("FINAL\t\t\t: %.2f\n",Final);
+        printf("HW \t\t: %.2f\n",hw);
+        printf("PROJECTS \t: %.2f\n",project);
+        printf("LABS\t\t: %.2f\n",lab);
+        printf("MIDTERM1\t: %.2f\n",midterm1);
+        printf("MIDTERM2\t: %.2f\n",midterm2);
+        printf("FINAL\t\t: %.2f\n",Final);
 
         printf("-------------------------------\n");
         printf("OVERALL AVERAGE: %.2f\n", finalScore);
