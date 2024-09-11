@@ -1,4 +1,3 @@
-
 //unit2.hw
 //Group members: Katie Kwatinetz, Lanaiya Walters
 
@@ -11,7 +10,7 @@ int main()
     int counter;
     float finalScore;
     char letterGrade;
-
+    char minusAdd;
 
     do
     {
@@ -150,24 +149,63 @@ int main()
         finalScore = (hw * 0.2) + (project * 0.2) + (lab * 0.05) + ((midterm1 + midterm2 + Final) / 3) * 0.55;
 
         // Determine letter grade
-        switch ((int)finalScore / 10)
+            // Determine letter grade
+        if (finalScore >= 94)
         {
-            case 10:
-            case 9:
-                letterGrade = 'A';
-                break;
-            case 8:
-                letterGrade = 'B';
-                break;
-            case 7:
-                letterGrade = 'C';
-                break;
-            case 6:
-                letterGrade = 'D';
-                break;
-            default:
-                letterGrade = 'F';
+            letterGrade = 'A';
         }
+        else if (finalScore >= 90)
+        {
+            letterGrade = 'A';
+            minusAdd = '-';
+        }
+        else if (finalScore >= 87)
+        {
+            letterGrade = 'B';
+            minusAdd = '+';
+        }
+        else if (finalScore >= 84)
+        {
+            letterGrade = 'B';
+        }
+        else if (finalScore >= 80)
+        {
+            letterGrade = 'B';
+            minusAdd = '-';
+        }
+        else if (finalScore >= 77)
+        {
+            letterGrade = 'C';
+            minusAdd = '+';
+        }
+        else if (finalScore >= 74)
+        {
+            letterGrade = 'C';
+        }
+        else if (finalScore >= 70)
+        {
+            letterGrade = 'C';
+            minusAdd = '-';
+        }
+        else if (finalScore >= 67)
+        {
+            letterGrade = 'D';
+            minusAdd = '+';
+        }
+        else if (finalScore >= 64)
+        {
+            letterGrade = 'D';
+        }
+        else if (finalScore >= 61)
+        {
+            letterGrade = 'D';
+            minusAdd = '-';
+        }
+        else
+        {
+            letterGrade = 'F';
+        }
+
         printf("Here are all your average scores:\n");
         printf("HW \t\t: %.2f\n",hw);
         printf("PROJECTS \t: %.2f\n",project);
@@ -180,7 +218,7 @@ int main()
         printf("OVERALL AVERAGE: %.2f\n", finalScore);
         printf("(%.2f*.2 + %.2f*.2 + %.2f*.05 + (%.2f+%.2f+%.2f)*.55/3 is %.2f)\n",hw,project,lab,midterm1,midterm2,Final,finalScore);
         printf("-------------------------------\n");
-        printf("\t\t\tFINAL LETTER GRADE: %c\n", letterGrade);
+        printf("\t\t\tFINAL LETTER GRADE: %c%c \n", letterGrade, minusAdd);
 
         // Start Over?
         printf("Would you like to start over (Y/N): ");
@@ -203,7 +241,7 @@ int main()
                 break;
             }
         }
-        
+
 
     }
     while (startOver == 'Y' || startOver == 'y');
